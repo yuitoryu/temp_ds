@@ -89,7 +89,7 @@ def bind_rate(csv_file):
     data = fp.readlines()
     del data[0]
     level_dict = {}
-    #写入歌曲定数
+    # Save rating
     for song in data:
         song.strip('\n')
         temp = song.split(',')

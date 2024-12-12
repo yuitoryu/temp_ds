@@ -1,9 +1,13 @@
+'''
+@author: Feiyang Wu
+'''
 import json
 from torch.utils.data import Dataset
 import torch
 import math
 
 class chartStats(Dataset):
+    # dataset, output tokens as model input and a binary value for ground truth
     def __init__(self, token_file, boundary):
         self.boundary = boundary
         with open(token_file, 'r') as fp:
